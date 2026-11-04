@@ -4,5 +4,12 @@ from app.modules.collectors.base import (
     CollectorError,
     CollectorResult,
 )
+from app.modules.collectors.registry import CollectorRegistry
 
-__all__ = ["Collector", "CollectorDocument", "CollectorError", "CollectorResult"]
+__all__ = [
+    "Collector",
+    "CollectorDocument",
+    "CollectorError",
+    "CollectorRegistry",
+    "CollectorResult",
+]
