@@ -4,6 +4,7 @@ from app.models.catalog import Exam, PermissionStatus, Source, SourceType
 from app.models.document import DocumentStatus, SourceDocument
 from app.models.question import Alternative, Question, QuestionFormat
 from app.models.answer_key import AnswerKey, AnswerKeyStatus
+from app.models.classification import Subject, Topic
 from app.models.processing import ProcessingRecord, ProcessingStatus
 
 __all__ = [
@@ -14,6 +15,8 @@ __all__ = [
     "Alternative",
     "AnswerKey",
     "AnswerKeyStatus",
+    "Subject",
+    "Topic",
     "Question",
     "QuestionFormat",
     "ProcessingRecord",
