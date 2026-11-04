@@ -79,6 +79,65 @@ p {
   margin-top: 0;
 }
 
+.page-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.inline-form {
+  display: flex;
+  gap: 8px;
+}
+
+input,
+.inline-form button {
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #ffffff;
+}
+
+.inline-form button {
+  color: #ffffff;
+  background: #2f5bea;
+  border-color: #2f5bea;
+  cursor: pointer;
+}
+
+.data-list {
+  display: grid;
+  gap: 8px;
+  max-width: 720px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.data-list li {
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #ffffff;
+}
+
+.error-message {
+  color: #b42318;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .empty-state {
   max-width: 640px;
   margin-top: 48px;
