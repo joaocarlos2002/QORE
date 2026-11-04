@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+coverage/
+
+# Tauri
+src-tauri/target/
+
+# Local application data
+database/
+documents/
+extracted/
+logs/
+cache/
+backups/
+
+# Local tooling
+.env
+.env.*
+!.env.example
+.DS_Store
