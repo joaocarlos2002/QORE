@@ -13,6 +13,12 @@ class SourceType(StrEnum):
     OTHER = "other"
 
 
+class PermissionStatus(StrEnum):
+    UNKNOWN = "unknown"
+    AUTHORIZED = "authorized"
+    RESTRICTED = "restricted"
+
+
 class Source(Base):
     __tablename__ = "sources"
 
@@ -20,6 +26,10 @@ class Source(Base):
     name: Mapped[str] = mapped_column(String(160), unique=True, index=True)
     url: Mapped[str] = mapped_column(String(2048), unique=True, index=True)
     source_type: Mapped[SourceType] = mapped_column(default=SourceType.OTHER)
+    permission_status: Mapped[PermissionStatus] = mapped_column(
+        default=PermissionStatus.UNKNOWN
+    )
+    license_notes: Mapped[str | None] = mapped_column(Text)
     availability_notes: Mapped[str | None] = mapped_column(Text)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), nullable=False

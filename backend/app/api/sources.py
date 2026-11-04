@@ -39,6 +39,8 @@ def create_source(payload: SourceCreate, db: Session = Depends(get_db)) -> Sourc
         payload.name,
         str(payload.url),
         payload.source_type,
+        payload.permission_status,
+        payload.license_notes,
         payload.availability_notes,
     )
     db.commit()
