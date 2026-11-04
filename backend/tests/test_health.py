@@ -7,7 +7,8 @@ client = TestClient(app)
 
 
 def test_health_returns_ok() -> None:
-    response = client.get("/api/v1/health")
+    token = app.state.authenticator.token
+    response = client.get("/api/v1/health", headers={"Authorization": f"Bearer {token}"})
 
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
