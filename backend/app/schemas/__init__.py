@@ -1,5 +1,6 @@
 from app.schemas.board import BoardCreate, BoardRead
 from app.schemas.common import ErrorDetail, ErrorResponse, Page
+from app.schemas.exam import ExamCreate, ExamRead
 from app.schemas.source import SourceCreate, SourceRead
 
 __all__ = [
@@ -7,6 +8,8 @@ __all__ = [
     "BoardRead",
     "ErrorDetail",
     "ErrorResponse",
+    "ExamCreate",
+    "ExamRead",
     "Page",
     "SourceCreate",
     "SourceRead",
