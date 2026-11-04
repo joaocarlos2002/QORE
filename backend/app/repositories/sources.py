@@ -2,7 +2,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.models import Source, SourceType
+from app.models import PermissionStatus, Source, SourceType
 
 
 class DuplicateSourceError(ValueError):
@@ -22,12 +22,16 @@ class SourceRepository:
         name: str,
         url: str,
         source_type: SourceType,
+        permission_status: PermissionStatus,
+        license_notes: str | None,
         availability_notes: str | None,
     ) -> Source:
         source = Source(
             name=name,
             url=url,
             source_type=source_type,
+            permission_status=permission_status,
+            license_notes=license_notes,
             availability_notes=availability_notes,
         )
         self.session.add(source)
