@@ -1,0 +1,9 @@
+QORE database migrations
+
+Generate a migration from the repository root with:
+
+    alembic -c migrations/alembic.ini revision -m "describe change"
+
+Apply migrations with:
+
+    alembic -c migrations/alembic.ini upgrade head
